@@ -1,0 +1,36 @@
+{% include "sitio/cabecera.html" %}
+
+<div class="row">
+
+  {% for pan in panes %}
+
+      <div class="col-md-3">
+
+        <div class="card">
+
+          <img class="card-img-top"
+               src="/img/{{ pan.imagen }}"
+               alt="{{ pan.nombre }}" />
+
+          <div class="card-body">
+
+            <h4 class="card-title">{{ pan.nombre }}</h4>
+
+            <p class="card-text">
+
+              <a class="btn btn-success" href="{{ pan.url }}" role="button">Compra</a>
+
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+</div>
+
+
+
+{% include "sitio/pie.html" %}
